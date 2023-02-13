@@ -1,7 +1,9 @@
 # desafio-techlead
 
 Cargo: Analista de Desenvolvimento de Sistemas
+
 Senioridade: Nível 1 (Junior)
+
 Linguagem: Java
 
 Foi utilizada a linguagem Java e o banco de dados MySQL para a resolução do desafio. 
@@ -95,7 +97,9 @@ UNLOCK TABLES;
 
 
 --> CARGA INICIAL DO BANCO DE DADOS:
+
 select * from cliente;
+
  +-----+--------+-----------+---------+--------+
 | id1 | nome   | tipoConta | id      | senha  |
 +-----+--------+-----------+---------+--------+
@@ -104,7 +108,9 @@ select * from cliente;
 |  53 | iarley |         2 | 7894561 | 741741 |
 +-----+--------+-----------+---------+--------+
 
+
 select * from livro;
+
 +----+-------------+------+----------+----------------+
 | id | nome        | ano  | editora  | codigoCadastro |
 +----+-------------+------+----------+----------------+
@@ -112,5 +118,6 @@ select * from livro;
 | 23 | bbb         |  222 | eee      |        5378755 |
 | 38 | livroIarley | 2003 | paysandu |        7894561 |
 +----+-------------+------+----------+----------------+
+
 
 Para fazer a conexão com o banco de dados: "jdbc:mysql://localhost/biblioteca?useTimezone=true&serverTimezone=UTC", "root", "mysqlroot"
