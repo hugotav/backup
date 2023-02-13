@@ -12,14 +12,12 @@ public class CadastroLivros {
 	static Scanner input = new Scanner(System.in);
 	
 	public static void cadastrarLivros(int idClientePerfil) throws SQLException{ 
-	       
-    	System.out.println("Favor insira o nome do livro: ");
-        String nome = input.nextLine();
+	    
+        String nome = ValidacaoEntradas.confirmaNomeLivro();
 
         int ano = ValidacaoEntradas.confirmaAnoLivro();
 
-        System.out.println("Favor insira a editora que publicou o livro: ");
-        String editora = input.nextLine();
+        String editora = ValidacaoEntradas.confirmaNomeEditora();
         
         int codigoCadastro = ValidacaoEntradas.confirmaRg();       
         

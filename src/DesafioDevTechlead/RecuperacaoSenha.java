@@ -12,9 +12,7 @@ public class RecuperacaoSenha {
 	
 	public static void recuperarSenha() throws SQLException{
 	    
-		//String nome = ValidacaoEntradas.confirmaNome();
-		System.out.println("Favor insira o seu nome: ");
-		String nome = input.nextLine();
+		String nome = ValidacaoEntradas.confirmaNome();
 		
         int id = ValidacaoEntradas.confirmaRg();
         

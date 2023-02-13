@@ -14,8 +14,7 @@ public class ExclusaoLivros {
         
         if (idClientePerfil == 2){
         
-        System.out.println("Favor insira o nome do livro: ");
-        String nome = input.nextLine();
+        String nome = ValidacaoEntradas.confirmaNomeLivro();
         
         int ano = ValidacaoEntradas.confirmaAnoLivro();
         
@@ -62,8 +61,7 @@ public class ExclusaoLivros {
         
         if (idClientePerfil == 23){
         
-        	System.out.println("Favor insira o nome do livro: ");
-            String nome = input.nextLine();
+        	String nome = ValidacaoEntradas.confirmaNomeLivro();
             
             int ano = ValidacaoEntradas.confirmaAnoLivro();
             

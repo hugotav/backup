@@ -14,10 +14,8 @@ public class EdicaoLivros {
     	
         if (idClientePerfil == 2){
         	
-        	//String nome = ValidacaoEntradas.confirmaNomeLivroEEditora();
-        	System.out.println("Favor insira o seu nome: ");
-    		String nome = input.nextLine();
-        	
+        	String nome = ValidacaoEntradas.confirmaNomeLivro();
+        	        	
             int ano = ValidacaoEntradas.confirmaAnoLivro();
             
             int codigoCadastro = ValidacaoEntradas.confirmaRg();
@@ -55,10 +53,8 @@ public class EdicaoLivros {
                         switch (operacao) {
                         
                         case 1:
-                        	//String nomeNovo = ValidacaoEntradas.confirmaNomeLivroEEditora();
-                        	System.out.println("Favor insira o novo nome: ");
-                    		String nomeNovo = input.nextLine();
-                        	
+                        	String nomeNovo = ValidacaoEntradas.confirmaNomeLivro();
+                        	                        	
         		            PreparedStatement stm1 = 
         							connection.prepareStatement("UPDATE LIVRO SET NOME = ? WHERE NOME = ? AND ANO = ?");
         					stm1.setString(1, nomeNovo);
@@ -87,9 +83,7 @@ public class EdicaoLivros {
                             break;
                             
                         case 3:
-                        	//String nomeEditora = ValidacaoEntradas.confirmaNomeLivroEEditora();
-                        	System.out.println("Favor insira o novo nome da editora: ");
-                    		String nomeEditora = input.nextLine();
+                        	String nomeEditora = ValidacaoEntradas.confirmaNomeEditora();
                         	
         		            PreparedStatement stm3 = 
         							connection.prepareStatement("UPDATE LIVRO SET EDITORA = ? "
@@ -129,9 +123,7 @@ public class EdicaoLivros {
         
         	if (idClientePerfil == 23){
         
-        	//String nome = ValidacaoEntradas.confirmaNomeLivroEEditora();
-        	System.out.println("Favor insira o seu nome: ");
-        	String nome = input.nextLine();
+        	String nome = ValidacaoEntradas.confirmaNomeLivro();
         		
             int ano = ValidacaoEntradas.confirmaAnoLivro();
             
@@ -167,8 +159,7 @@ public class EdicaoLivros {
                         switch (operacao) {
                         
                         case 1:
-                        	System.out.println("Favor insira o novo nome do livro: ");
-        		            String nomeNovo = input.nextLine();
+                        	String nomeNovo = ValidacaoEntradas.confirmaNomeLivro();
         		            
         		            PreparedStatement stm1 = 
         							connection.prepareStatement("UPDATE LIVRO SET NOME = ? WHERE NOME = ?"
@@ -199,8 +190,7 @@ public class EdicaoLivros {
                             break;
                             
                         case 3:
-                        	System.out.println("Favor insira o novo nome da editora: ");
-        		            String nomeEditora  = input.nextLine();
+                        	String nomeEditora = ValidacaoEntradas.confirmaNomeEditora();
         		            
         		            PreparedStatement stm3 = 
         							connection.prepareStatement("UPDATE LIVRO SET EDITORA = ? "
