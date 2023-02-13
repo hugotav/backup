@@ -15,7 +15,7 @@ public static void criarConta() throws SQLException{
         
 		//String nome = ValidacaoEntradas.confirmaNome();
 		System.out.println("Favor insira o nome do seu usuario: ");
-		String nome = input.nextLine();
+		String nome = input.next();
 	
 		int id = ValidacaoEntradas.confirmaRg();
         

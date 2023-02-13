@@ -14,11 +14,17 @@ public class EdicaoLivros {
     	
         if (idClientePerfil == 2){
         	
-        	String nome = ValidacaoEntradas.confirmaNomeLivro();
-        	        	
+        	//String nome = ValidacaoEntradas.confirmaNomeLivro();
+        	System.out.println("Favor insira o nome do livro: ");
+    		String nome = input.next();
+        	
             int ano = ValidacaoEntradas.confirmaAnoLivro();
+    		//System.out.println("Favor insira o ano: ");
+    		//int ano = input.nextInt();
             
             int codigoCadastro = ValidacaoEntradas.confirmaRg();
+            //System.out.println("Favor insira o seu RG: ");
+    		//int codigoCadastro = input.nextInt();
             
             ConnectionFactory factory = new ConnectionFactory();
     		Connection connection = factory.recuperarConexao();
@@ -40,6 +46,8 @@ public class EdicaoLivros {
     				String editora1 = rst.getString("EDITORA");
     				Integer codigo1 = rst.getInt("CODIGOCADASTRO");
     				
+    			
+    				
     				if(nome1.equals(nome) && ano1 == ano && codigo1 == codigoCadastro) {
     					
     					System.out.println("Por favor selecione a operacao desejada");
@@ -53,8 +61,10 @@ public class EdicaoLivros {
                         switch (operacao) {
                         
                         case 1:
-                        	String nomeNovo = ValidacaoEntradas.confirmaNomeLivro();
-                        	                        	
+                        	//String nomeNovo = ValidacaoEntradas.confirmaNomeLivro();
+                        	System.out.println("Favor insira o nome do livro: ");
+                    		String nomeNovo = input.next();  
+                        	
         		            PreparedStatement stm1 = 
         							connection.prepareStatement("UPDATE LIVRO SET NOME = ? WHERE NOME = ? AND ANO = ?");
         					stm1.setString(1, nomeNovo);
@@ -83,7 +93,9 @@ public class EdicaoLivros {
                             break;
                             
                         case 3:
-                        	String nomeEditora = ValidacaoEntradas.confirmaNomeEditora();
+                        	//String nomeEditora = ValidacaoEntradas.confirmaNomeEditora();
+                        	System.out.println("Favor insira o nome da editora: ");
+                    		String nomeEditora = input.next();
                         	
         		            PreparedStatement stm3 = 
         							connection.prepareStatement("UPDATE LIVRO SET EDITORA = ? "
@@ -123,7 +135,9 @@ public class EdicaoLivros {
         
         	if (idClientePerfil == 23){
         
-        	String nome = ValidacaoEntradas.confirmaNomeLivro();
+        	//String nome = ValidacaoEntradas.confirmaNomeLivro();
+        	System.out.println("Favor insira o nome do livro: ");
+        	String nome = input.next();
         		
             int ano = ValidacaoEntradas.confirmaAnoLivro();
             
@@ -159,8 +173,10 @@ public class EdicaoLivros {
                         switch (operacao) {
                         
                         case 1:
-                        	String nomeNovo = ValidacaoEntradas.confirmaNomeLivro();
-        		            
+                        //String nomeNovo = ValidacaoEntradas.confirmaNomeLivro();
+                        System.out.println("Favor insira o nome do livro: ");
+                        String nomeNovo = input.next();
+                        	
         		            PreparedStatement stm1 = 
         							connection.prepareStatement("UPDATE LIVRO SET NOME = ? WHERE NOME = ?"
         									+ "AND ANO = ?");
@@ -190,7 +206,9 @@ public class EdicaoLivros {
                             break;
                             
                         case 3:
-                        	String nomeEditora = ValidacaoEntradas.confirmaNomeEditora();
+                        	//String nomeEditora = ValidacaoEntradas.confirmaNomeEditora();
+                        	System.out.println("Favor insira o nome da editora: ");
+                    		String nomeEditora = input.next();
         		            
         		            PreparedStatement stm3 = 
         							connection.prepareStatement("UPDATE LIVRO SET EDITORA = ? "

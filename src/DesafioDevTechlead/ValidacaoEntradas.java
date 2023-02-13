@@ -11,15 +11,15 @@ public class ValidacaoEntradas {
 		String digitacao2;
     	String nome = "";
     	do {
-    	    System.out.println("Favor insira o nome do livro: ");
+    	    System.out.println("Favor insira o seu nome: ");
     	    digitacao2 = input.next();
-    	    if (digitacao2.matches("[a-zA-Z0-9\s]+")) {
+    	    if (digitacao2.matches("^[a-zA-Z0-9\s]+$")) {
     	        nome = digitacao2;
     	        return nome;
     	    } else {
     	        System.out.println("Nome invalido!");
     	    }
-    	} while (!digitacao2.matches("[a-zA-Z0-9\s]+"));
+    	} while (!digitacao2.matches("^[a-zA-Z0-9\s]+$"));
 		return nome;
 	}
 	

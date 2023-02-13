@@ -13,11 +13,15 @@ public class CadastroLivros {
 	
 	public static void cadastrarLivros(int idClientePerfil) throws SQLException{ 
 	    
-        String nome = ValidacaoEntradas.confirmaNomeLivro();
+        //String nome = ValidacaoEntradas.confirmaNomeLivro();
+		System.out.println("Favor insira o nome do livro: ");
+		String nome = input.next();
 
         int ano = ValidacaoEntradas.confirmaAnoLivro();
 
-        String editora = ValidacaoEntradas.confirmaNomeEditora();
+        //String editora = ValidacaoEntradas.confirmaNomeEditora();
+        System.out.println("Favor insira o nome da editora: ");
+		String editora = input.next();
         
         int codigoCadastro = ValidacaoEntradas.confirmaRg();       
         
